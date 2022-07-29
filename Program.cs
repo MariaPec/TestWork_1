@@ -1,9 +1,16 @@
-﻿
 string Prompt(string message)
 {
 System.Console.WriteLine(message);
 string param = Console.ReadLine();
 return param;
+}
+
+void PrintArray(string[] PArray)
+{
+    for (int j = 0; j < PArray.Length; j++)
+    {
+        Console.Write($"{PArray[j]}, ");
+    }
 }
 
 int firstLenght = 5; // Задача решена для массива длиной 5
@@ -13,14 +20,6 @@ string [] firstArray = new string [firstLenght];
 for (int i = 0; i < firstLenght; i++)
 {
 firstArray [i] = Prompt("Введите элемент массива => ");
-}
-
-void PrintArray(string[] PArray)
-{
-    for (int j = 0; j < PArray.Length; j++)
-    {
-        Console.Write($"{PArray[j]}, ");
-    }
 }
 
 Console.Write("Первоначальный массив =>  ");
@@ -54,8 +53,3 @@ for (int i = 0; i < firstArray.Length; i++)
 
 Console.Write("\r\nСформированный массив =>  ");
 PrintArray(secondArray);
-
-
-
-
-
